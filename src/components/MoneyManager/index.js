@@ -1,8 +1,8 @@
+/* Write your CSS here */
 import {Component} from 'react'
 import {v4} from 'uuid'
 
 import TransactionItem from '../TransactionItem'
-
 import MoneyDetails from '../MoneyDetails'
 
 import './index.css'
@@ -17,8 +17,6 @@ const transactionTypeOptions = [
     displayText: 'Expenses',
   },
 ]
-
-// Write your code here
 
 class MoneyManager extends Component {
   state = {
@@ -94,6 +92,7 @@ class MoneyManager extends Component {
         incomeAmount += eachTransaction.amount
       }
     })
+
     return incomeAmount
   }
 
@@ -129,7 +128,7 @@ class MoneyManager extends Component {
             <h1 className="heading">Hi, Richard</h1>
             <p className="header-content">
               Welcome back to your
-              <span className="money-manager-text">Money Manager</span>
+              <span className="money-manager-text"> Money Manager</span>
             </p>
           </div>
           <MoneyDetails
@@ -147,8 +146,8 @@ class MoneyManager extends Component {
                 type="text"
                 id="title"
                 value={titleInput}
-                className="input"
                 onChange={this.onChangeTitleInput}
+                className="input"
                 placeholder="TITLE"
               />
               <label className="input-label" htmlFor="amount">
@@ -157,8 +156,8 @@ class MoneyManager extends Component {
               <input
                 type="text"
                 id="amount"
-                value={amountInput}
                 className="input"
+                value={amountInput}
                 onChange={this.onChangeAmountInput}
                 placeholder="AMOUNT"
               />
